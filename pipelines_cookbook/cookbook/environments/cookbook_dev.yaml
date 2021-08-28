@@ -1,0 +1,6 @@
+execution:
+  multiprocess:
+    config:
+      max_concurrent: 2
+storage:
+  filesystem: null
