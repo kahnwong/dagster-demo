@@ -70,7 +70,6 @@ pipelines = [cookbook_sensor]
 
 sensors = [
     cookbook_sensor_def,  # local filesystem
-    # cookbook_s3_sensor_def, # s3
 ]
 
 repo = pipelines + sensors

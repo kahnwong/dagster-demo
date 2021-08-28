@@ -22,10 +22,6 @@ def get_day(day, log=log):
         day_value = str(day_now - timedelta(days=1))
     elif day == "today":
         day_value = str(day_now)
-    elif day == "lastmonth":
-        # return xxxx-xx-xx, strip trailing "-xx" in solids instead
-        day_value = datetime.now().replace(day=1) - timedelta(days=1)
-        day_value = str(day_value.date())
     else:
         day_value = str(day)
     log.info("day_value: {}".format(day_value))
