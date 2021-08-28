@@ -1,0 +1,35 @@
+version: '3.7'
+services:
+  dagster:
+    build: .
+    ports:
+    - "3000:3000"
+    volumes:
+    - .:/opt/dagster/dags
+    environment:
+    - RUN_MODE=dagster
+    - DAGSTER_PG_USERNAME=postgres
+    - DAGSTER_PG_PASSWORD=postgrespassword
+    - DAGSTER_PG_HOST=db
+    - DAGSTER_PG_DB=postgres
+    depends_on:
+      - db
+      - dagster_daemon
+  dagster_daemon:
+    build: .
+    environment:
+    - RUN_MODE=dagster-daemon
+    - DAGSTER_PG_USERNAME=postgres
+    - DAGSTER_PG_PASSWORD=postgrespassword
+    - DAGSTER_PG_HOST=db
+    - DAGSTER_PG_DB=postgres
+    volumes:
+    - .:/opt/dagster/dags
+    depends_on:
+      - db
+  db:
+    image: postgres:12.2
+    environment:
+      - POSTGRES_PASSWORD=postgrespassword
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
