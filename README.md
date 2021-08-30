@@ -3,7 +3,7 @@
 ## Setup
 Note: On Big Sur, run `export SYSTEM_VERSION_COMPAT=1` before running `pipenv install`.
 
-```
+```bash
 # local test
 $ pipenv install
 $ dagit -h 0.0.0.0 -p 3000
@@ -16,7 +16,7 @@ docker-compose -f docker-compose-dagster.yml up
 ### General
 
 * plain python first
-* path: workspace.yml → [repos.py](http://repos.py) → pipelines
+* path: workspace.yml → `repos.py` → pipelines
 * then use docker with db for [schedule, backfill and sensor]
 
 ### Pipelines
