@@ -1,7 +1,9 @@
 ### Imports
+from random import choices
 from random import random
 from time import sleep
 
+from dagster import RetryRequested
 from dagster import solid
 
 
@@ -58,5 +60,18 @@ def step_six(context, a: int, b: int) -> int:
 def step_seven(context, a: int, b: int) -> int:
     output = a + b
     context.log.info(f"output: {output}")
+
     return_random_sleep()
+
+    ### trigger retry
+    try:
+        d = {1: 40, 0: 60}
+        num = choices(*zip(*d.items()), k=1)[0]
+
+        context.log.info(f"num: {num}")
+
+        3 / num
+    except ZeroDivisionError:
+        raise RetryRequested(max_retries=5)
+
     return output
