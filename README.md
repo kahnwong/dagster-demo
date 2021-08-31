@@ -6,6 +6,7 @@ Note: On Big Sur, run `export SYSTEM_VERSION_COMPAT=1` before running `pipenv in
 ```bash
 # local test
 $ pipenv install
+$ pipenv shell
 $ dagit -h 0.0.0.0 -p 3000
 
 # docker

@@ -26,7 +26,7 @@ prod_preset = PresetDefinition.from_pkg_resources(
     name="prod",
     mode="local",
     pkg_resource_defs=[
-        ("pipelines_cookbook.cookbook.environments", "cookbook_prod.yaml"),
+        ("pipelines_cookbook.cookbook.environments", "prod.yaml"),
     ],
 )
 
@@ -34,7 +34,7 @@ dev_preset = PresetDefinition.from_pkg_resources(
     name="dev",
     mode="local",
     pkg_resource_defs=[
-        ("pipelines_cookbook.cookbook.environments", "cookbook_dev.yaml"),
+        ("pipelines_cookbook.cookbook.environments", "dev.yaml"),
     ],
 )
 
