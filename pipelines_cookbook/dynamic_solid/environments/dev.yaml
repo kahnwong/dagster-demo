@@ -1,0 +1,10 @@
+execution:
+  multiprocess:
+    config:
+      max_concurrent: 2
+solids:
+  return_partitions:
+    config:
+      total_prtns: 100
+storage:
+  filesystem: null
