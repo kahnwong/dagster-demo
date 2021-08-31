@@ -4,6 +4,7 @@ from dagster import OutputDefinition
 from dagster import solid
 
 from utils.day_utils import get_day
+from utils.sleep_utils import return_random_sleep
 
 
 ### SOLIDS
@@ -15,5 +16,7 @@ def prtn_set(context) -> str:
     log = context.log
     day = get_day(context.solid_config["day"], log)
     log.info(f"day: {day}")
+
+    return_random_sleep()
 
     return "s3path"

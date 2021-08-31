@@ -1,14 +1,10 @@
 ### Imports
 from random import choices
-from random import random
-from time import sleep
 
 from dagster import RetryRequested
 from dagster import solid
 
-
-def return_random_sleep():
-    return sleep(10 * random())
+from utils.sleep_utils import return_random_sleep
 
 
 ### SOLIDS
