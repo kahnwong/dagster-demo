@@ -1,0 +1,24 @@
+[tool.dagster]
+module_name = "dags"
+
+[tool.poetry]
+name = "dags"
+version = "3.0.0"
+description = ""
+authors = ["kahnwong <karn@karnwong.me>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+dagit = "^1.4.14"
+dagster = "^1.4.14"
+python-dotenv = "^1.0.0"
+requests = "^2.31.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.2"
+mypy = "^1.5.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
