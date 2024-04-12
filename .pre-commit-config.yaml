@@ -70,8 +70,6 @@ repos:
       - id: poetry-lock
       - id: poetry-export
         args: ["--without-hashes", "-f", "requirements.txt", "-o", "requirements.txt"]
-      - id: poetry-export
-        args: ["--with", "dev", "--without-hashes", "-f", "requirements.txt", "-o", "requirements-dev.txt"]
   # - repo: local
   #   hooks:
   #     - id: mypy
