@@ -7,6 +7,7 @@
 - schedules
 - assets dependencies
 - job status alerts
+- auto-materialize assets
 
 ## Usage
 
