@@ -1,25 +1,19 @@
 [tool.dagster]
 module_name = "dags"
 
-[tool.poetry]
+[project]
 name = "dags"
-version = "3.0.0"
-description = ""
-authors = ["kahnwong <karn@karnwong.me>"]
+version = "0.1.0"
+description = "Add your description here"
 readme = "README.md"
-
-[tool.poetry.dependencies]
-python = "^3.11"
-dagit = "^1.4.14"
-dagster = "^1.4.14"
-python-dotenv = "^1.0.0"
-requests = "^2.31.0"
-urllib3 = "1.26.16"
-
-[tool.poetry.group.dev.dependencies]
-pytest = "^7.4.2"
-mypy = "^1.5.1"
+requires-python = ">=3.12"
+dependencies = [
+    "dagit>=1.9.6",
+    "dagster>=1.4.14",
+    "python-dotenv>=1.0.1",
+    "requests>=2.32.3",
+]
 
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
