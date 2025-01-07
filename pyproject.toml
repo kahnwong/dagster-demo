@@ -9,7 +9,7 @@ readme = "README.md"
 authors = [
     { name = "Karn Wong", email = "karn@karnwong.me" }
 ]
-requires-python = ">=3.11"
+requires-python = ">=3.12"
 dependencies = [
     "dagit>=1.9.6",
     "dagster>=1.9.6",
