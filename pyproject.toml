@@ -11,11 +11,10 @@ authors = [
 ]
 requires-python = ">=3.11"
 dependencies = [
-    "dagit==1.4.14",
-    "dagster==1.4.14",
+    "dagit>=1.9.6",
+    "dagster>=1.9.6",
     "python-dotenv>=1.0.1",
     "requests>=2.32.3",
-    "urllib3>=1.26.20",
 ]
 
 [build-system]
