@@ -1,2 +1,2 @@
 start:
-	dagster dev
+	uv run dagster dev

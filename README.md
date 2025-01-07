@@ -12,7 +12,6 @@
 ## Usage
 
 ```bash
-poetry install
-poetry shell
+uv sync
 make start
 ```
